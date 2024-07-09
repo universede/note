@@ -1,0 +1,46 @@
+openjdk:sudo apt-get install openjdk-8-jdk
+
+keepassxc:sudo apt-get install keepassxc
+
+git:sudo apt-get install git 
+
+svn:sudo apt install subversion 
+
+google:把google...deb包放在/home/univese;sudo dpkg -i google...deb
+
+firefox:Chinese Simplified(zh-CN) language Pack插件;浏览器url栏输入 about:config ，右键添加 【string】, 名称：intl.locale.requested 值：zh-CN
+
+teamviewer:官网https://www.teamviewer.com/zhcn/download/linux/;sudo dpkg -i teamviewer..deb；缺依赖执行sudo apt install f;sudo dpkg -i teamviewer..deb
+
+vm虚拟机安装:参照网站https://linux265.com/news/3617.html；
+1.sudo apt update
+sudo apt install build-essential
+sudo apt install linux-headers-$(uname -r)
+2.到网站https://www.vmware.com/go/getplayer-linux，本地已经备份
+3.chmod +x VMware.bundle
+4.sudo ./VMware.bundle
+
+virtualbox:sudo apt-get install virtualbox
+
+wps安装会出现排版问题： 字体simsun.ttc解压到$HOME/.fonts下面（已备份）；fc-cache -fv 刷新cache；重新打开你的wps或者QQ。就可以生效了。注意：必须是.fonts文件，如果没有可以自己创建
+
+nodejs安装中，使用node不会出现什么问题，而使用npm会出现一个问题，即internal/modules/cjs/loader.js:1032
+  throw err;
+Error: Cannot find module '/usr/bin/node_modules/npm/bin/npm-cli.js'，注意到不能发现module，则需要到先找到npm执行文件的路径，然后使用文件编辑器打开npm，修改basedir路径，即npm所在的路径，但要注意NPM_CLI_JS的路径，表明这个路径是通过basedir的路径获取的路径，例如basedir="//media/universe/_dde_data/application/env/node/lib/"即可，如果在lib文件下还要加/node_modules/npm/bin则会包上面一样的错，因为路径找不到
+
+GIMP
+apt install flatpak
+打开gimp官网下载gimp,得到一个使用flatpak才能安装的文件
+flatpak install org.gimp.GIMP.flatpakref
+
+RedisInsight redis可视化工具
+
+postwoman
+
+epub转pdf
+安装calibre
+
+sudo apt install fcitx-libpinyin
+
+
+

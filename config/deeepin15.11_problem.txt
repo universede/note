@@ -1,0 +1,35 @@
+亮度问题
+文件路径：/sys/devices/pci0000:00/0000:00:01.0/backlight/amdgpu_bl1主要用于指导出现的原因
+命令：
+su -
+echo 200 > /sys/devices/pci0000:00/0000:00:01.0/backlight/amdgpu_bl1/brightness
+
+标题栏太宽
+参照：https://github.com/linuxdeepin/developer-center/issues/1210
+第一步
+//如果是白色主题
+mkdir -p ~/.local/share/deepin/themes/deepin/light
+//如果是黑色主题
+mkdir -p ~/.local/share/deepin/themes/deepin/dark
+第二步
+cd ~/.local/share/deepin/themes/deepin/light
+deepin-editor titlebar.ini
+第三步
+    [Active]
+    height=1
+
+    [Inactive]
+    height=1
+注意：如果把height的参数变为1,则关闭按钮、变大、大小会消失
+如果是google浏览器可以在标题栏点击右键，选择系统的标题栏
+firefox则是在定制中可以设置
+
+开机时间过长，解决方案：
+1.关闭plymouth-quit-wait.service，开机系统选择等待时间
+->sudo systemctl mask plymouth-quit-wait.service
+
+系统蜂鸣声：
+执行 sudo vi /etc/modprobe.d/blacklist-pcsp.conf，输入以下内容：
+blacklist pcspkr
+blacklist snd_pcsp
+保存后关闭编辑器，执行 sudo update-initramfs -u，然后重启即可

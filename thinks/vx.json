@@ -1,0 +1,50 @@
+{
+    "created_time": "2021-06-27T08:39:02Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2021-06-27T09:19:28Z",
+            "id": "52",
+            "modified_time": "2021-06-27T09:19:28Z",
+            "name": "note.md",
+            "signature": "7128250462805928012",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2024-07-04T11:19:03Z",
+            "id": "115",
+            "modified_time": "2024-07-04T11:19:03Z",
+            "name": "study-project.md",
+            "signature": "9761905334846653735",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2024-07-04T11:42:37Z",
+            "id": "119",
+            "modified_time": "2024-07-04T11:42:37Z",
+            "name": "业务学习方法.md",
+            "signature": "2462959335597574829",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "error_analyse"
+        },
+        {
+            "name": "knowlege"
+        },
+        {
+            "name": "books"
+        }
+    ],
+    "id": "46",
+    "modified_time": "2021-06-27T08:39:02Z",
+    "signature": "660964420172621900",
+    "version": 3
+}
